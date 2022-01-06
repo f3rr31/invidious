@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS public.videos
   CONSTRAINT videos_pkey PRIMARY KEY (id)
 );
 
+ALTER TABLE public.videos SET UNLOGGED;
+
 GRANT ALL ON TABLE public.videos TO current_user;
 
 -- Index: public.id_idx
